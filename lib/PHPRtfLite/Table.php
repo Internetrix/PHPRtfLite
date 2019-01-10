@@ -814,6 +814,9 @@ class PHPRtfLite_Table implements PHPRtfLite_Freeable
      */
     public function getRowsCount()
     {
+        if($this->_rows === null){
+            return 0;
+        }
         return count($this->_rows);
     }
 
